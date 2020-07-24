@@ -1,25 +1,19 @@
 # arduino-fancontrol
 Arduino controls relay, connected to fans, and turns off and on based on temperature.
 
-
-## Needs:
+## Needs
 Arduino
 Tinkerkit sheild 
 Tinkerkit thermistor
 Tinkerkit relay
 Some way of connecting the high power to a fan going through relay.
 
-
-
 ## Setup
-
 Attach tinkerkit sheild to Arduino
 connect relay to pin 01 on the "Output" side
-connect thermistor on pin I3 on the "Imput" side
-
+connect thermistor on pin I3 on the "Input" side
 
 ## Starting
-
 Download the Arduino IDE (https://www.arduino.cc/en/Main/Software) or use the online (never used it before)
 It is also on Microsoft Store, but not sure about Apple.
 
