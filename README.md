@@ -28,3 +28,5 @@ Download this repo
 put the Tinkerkit folder in Documents\Arduino\libraries (if on windows)
 
 Now open Relay.ino and send it to your arduino. it will now start. It is now possible to disconnect from your computer. you can connect the usb or the power to anything else as the arduino remembers.
+
+If you want to see the temperature that the thermister is recording, while on the arduino IDE, press CTRL + SHIFT + M. and it will bring up the serial monitor which tells you the temp.
