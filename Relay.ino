@@ -1,20 +1,3 @@
-/*
- Relay
-
- Turns on and off a Relay Module connected to O0,
- when pressing a Button Module attached to I0.
- http://www.tinkerkit.com/button/
- http://www.tinkerkit.com/relay/
-
- This example code is in the public domain.
- 
- created in Dec 2011
- by Federico Vanzati
- modified in Jun 2013
- by Matteo Loglio<http://matlo.me>
- 
- This example code is in the public domain.
- */
 
 // include the TinkerKit library
 #include <TinkerKit.h>
@@ -28,7 +11,7 @@ TKMosFet relay(O1);  // creating the object 'relay' that belongs to the 'TKRlay'
                  
 TKThermistor therm(I3);       // creating the object 'therm' that belongs to the 'TKThermistor' class 
                               // and giving the value to the desired output pin
-
+int trigger = 76;
 float C, F;
 void setup() {
  // initialize serial communications at 9600 bps
@@ -37,11 +20,10 @@ void setup() {
 
 void loop() {
 
- //Serial.print("\tF: ");
- // Serial.println(GetTemp());
+
  GetTemp();
 
-  if(therm.readFahrenheit() > 76) {
+  if(therm.readFahrenheit() > trigger) {
     relay.on();
   }
   else{
