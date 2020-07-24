@@ -25,6 +25,6 @@ It is also on Microsoft Store, but not sure about Apple.
 
 Download this repo
 
-put the Tinkerkit.h according to https://arduino.stackexchange.com/a/13019. (MAKE SURE TO REPLACE THE ULTRASONIC WITH TINKERKIT)
+put the Tinkerkit folder in Documents\Arduino\libraries (if on windows)
 
-now open Relay.ino and send it to your arduino. it will now start. It is now possible to disconnect from your computer. you can connect the usb or the power to anything else as the arduino remembers.
+Now open Relay.ino and send it to your arduino. it will now start. It is now possible to disconnect from your computer. you can connect the usb or the power to anything else as the arduino remembers.
