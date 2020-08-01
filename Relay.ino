@@ -12,8 +12,8 @@ TKMosFet relay(O1);  // creating the object 'relay' that belongs to the 'TKRlay'
                  
 TKThermistor therm(I3);       // creating the object 'therm' that belongs to the 'TKThermistor' class 
                               // and giving the value to the desired output pin
-int trigger = 75;
-int trigger2 = 73; 
+int high_trigger = 75;
+int low_trigger = 73; 
 float C, F;
 void setup() {
  // initialize serial communications at 9600 bps
@@ -21,28 +21,19 @@ void setup() {
 }
 
 void loop() {
-
-
-  if(GetTemp() > trigger) {
+  if(GetTemp() > high_trigger) {
     relay.on();
     led.on();
   }
-  if(GetTemp() < trigger2) {
+  if(GetTemp() < low_trigger) {
     relay.off();
     led.off();
   }
-  
 }
 
-
-
-
-
 float GetTemp() {
- 
   float temp = therm.readFahrenheit();
   delay(1000);
   Serial.println (temp);
   return(temp);
-  
 }
